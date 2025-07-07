@@ -26,10 +26,10 @@
         "php": "^7.2 || ^8.0"
     },
     "require-dev": {
-        "doctrine/orm": "^2.6",
-        "ramsey/uuid": "^3.7",
-        "symfony/messenger": "^4.3 || ^5.0 || ^6.0",
-        "symfony/var-exporter": "^4.3 || ^5.0 || ^6.0"
+        "doctrine/orm": "^2.6 || ^3.0",
+        "ramsey/uuid": "^3.7 || ^4.0",
+        "symfony/messenger": "^4.3 || ^5.0 || ^6.0 || ^7.0",
+        "symfony/var-exporter": "^4.3 || ^5.0 || ^6.0 || ^7.0"
     },
     "config": {
         "preferred-install": {
@@ -44,11 +44,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MsgPhp\\Domain\\": ""
-        },
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
+            "MsgPhp\\Domain\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MsgPhp\\Domain\\Tests\\": "tests"
+        }
     },
     "minimum-stability": "dev"
 }
