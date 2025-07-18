@@ -30,8 +30,9 @@ final class MappingCacheWarmer implements CacheWarmerInterface
 
     /**
      * @param string $cacheDir
+     * @param string|null $buildDir
      */
-    public function warmUp($cacheDir): array
+    public function warmUp($cacheDir, ?string $buildDir = null): array
     {
         $filesystem = new Filesystem();
         $filesystem->mkdir($target = $cacheDir.'/'.$this->dirName);
